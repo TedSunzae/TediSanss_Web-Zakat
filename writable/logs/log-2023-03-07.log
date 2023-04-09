@@ -1,0 +1,101 @@
+CRITICAL - 2023-03-07 01:42:37 --> Undefined variable $data
+in APPPATH\Models\MData.php on line 16.
+ 1 APPPATH\Models\MData.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Models\\MData.php', 16)
+ 2 APPPATH\Controllers\Data.php(38): App\Models\MData->saveData([...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Data->saveData()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-03-07 01:46:22 --> mysqli_sql_exception: Column 'nim' cannot be null in C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\app\Models\MData.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\app\Controllers\Data.php(38): App\Models\MData->saveData(Array)
+#6 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\system\CodeIgniter.php(927): App\Controllers\Data->saveData()
+#7 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+#8 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\system\Commands\Server\rewrite.php(46): require_once('C:\\Users\\rdwit\\...')
+#11 {main}
+CRITICAL - 2023-03-07 01:46:22 --> Column 'nim' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `mahasiswa` (`nim`, `nama`, `fakultas`, `alamat`) VALUES (NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `mahasiswa` (`nim`, `nama`, `fakultas`, `alamat`) VALUES (NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `mahasiswa` (`nim`, `nama`, `fakultas`, `alamat`) VALUES (NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `mahasiswa` (`nim`, `nama`, `fakultas`, `alamat`) VALUES (:nim:, :nama:, :fakultas:, :alamat:)', [...], false)
+ 5 APPPATH\Models\MData.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Data.php(38): App\Models\MData->saveData([...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Data->saveData()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 02:32:08 --> Undefined property: stdClass::$mim
+in APPPATH\Views\V_showData.php on line 29.
+ 1 APPPATH\Views\V_showData.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$mim', 'APPPATH\\Views\\V_showData.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\V_showData.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('V_showData', [], true)
+ 5 APPPATH\Controllers\Data.php(22): view('V_showData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Data->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 03:10:04 --> Undefined variable $nim
+in APPPATH\Views\V_editData.php on line 13.
+ 1 APPPATH\Views\V_editData.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nim', 'APPPATH\\Views\\V_editData.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\V_editData.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('V_editData', [], true)
+ 5 APPPATH\Controllers\Data.php(49): view('V_editData', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Data->editData('12001015')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 03:11:05 --> Undefined variable $id
+in APPPATH\Models\MData.php on line 27.
+ 1 APPPATH\Models\MData.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Models\\MData.php', 27)
+ 2 APPPATH\Controllers\Data.php(59): App\Models\MData->saveEditData([...], '12001015')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Data->saveEditData('12001015')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 03:23:42 --> Too few arguments to function App\Models\MData::hapusData(), 1 passed in C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\app\Controllers\Data.php on line 64 and exactly 2 expected
+in APPPATH\Models\MData.php on line 31.
+ 1 APPPATH\Controllers\Data.php(64): App\Models\MData->hapusData('12001015')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Data->hapusData('12001015')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 03:26:17 --> Too few arguments to function App\Models\MData::hapusData(), 1 passed in C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\app\Controllers\Data.php on line 64 and exactly 2 expected
+in APPPATH\Models\MData.php on line 31.
+ 1 APPPATH\Controllers\Data.php(64): App\Models\MData->hapusData('12001015')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Data->hapusData('12001015')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 03:27:21 --> Too few arguments to function App\Models\MData::hapusData(), 1 passed in C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\app\Controllers\Data.php on line 64 and exactly 2 expected
+in APPPATH\Models\MData.php on line 31.
+ 1 APPPATH\Controllers\Data.php(64): App\Models\MData->hapusData('12001015')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Data->hapusData('12001015')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-07 03:27:28 --> Too few arguments to function App\Models\MData::hapusData(), 1 passed in C:\Users\rdwit\Downloads\codeigniter4-framework-v4.2.10-0-g6ffad15\codeigniter4-framework-6ffad15\app\Controllers\Data.php on line 64 and exactly 2 expected
+in APPPATH\Models\MData.php on line 31.
+ 1 APPPATH\Controllers\Data.php(64): App\Models\MData->hapusData('12001015')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Data->hapusData('12001015')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Data))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
